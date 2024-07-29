@@ -64,10 +64,7 @@ ul {
 
 .navbar ul {
     display: flex;
-}
-
-.navbar ul li {
-    margin-left: 20px;
+    gap: 20px;
 }
 
 .header {
