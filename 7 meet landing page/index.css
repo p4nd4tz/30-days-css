@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-slate-dark: #28283d;
+    --clr-gray-cool: #87879d;
+    --clr-cerulean-deep: #4d96a9;
+    --clr-blue-sky: #8fe3f9;
+    --clr-blue-middle: #71c0d4;
+    --clr-amethyst: #855fb1;
+    --clr-gray-very-light: #fafafa;
+    --clr-purple-lavender: #b18bdd;
+
+    --font-family-primary: "Red Hat Display", sans-serif;
+    --font-size-base: 16px;
+    --line-height-base: 1.6;
+    --font-weight-bold: 900;
+
+    --container-width: 80%;
+    --container-max-width: 1200px;
+
+    --button-padding: 14px 28px;
+    --button-border-radius: 20px;
+    --button-letter-spacing: 0.5px;
+    --button-font-weight: bold;
+
+    --dot-size: 10px;
+    --header-padding: 35px 0 30px;
+    --header-font-size: 20px;
+    --header-font-weight: bolder;
+
+    --footer-padding: 100px 0;
+    --footer-width: 70%;
+
+    --separator-height: 5rem;
+    --circle-text-padding: 15px;
+}
+
+body {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    background-color: var(--clr-gray-very-light);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+}
+
+.container {
+    width: var(--container-width);
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.btn {
+    padding: var(--button-padding);
+    border: none;
+    border-radius: var(--button-border-radius);
+    background-color: var(--clr-cerulean-deep);
+    color: var(--clr-gray-very-light);
+    font-weight: var(--button-font-weight);
+    letter-spacing: var(--button-letter-spacing);
+    cursor: pointer;
+}
+
+.btn--green {
+    margin-right: 10px;
+}
+
+.btn--green:hover {
+    background-color: var(--clr-blue-sky);
+}
+
+.btn--purple {
+    background-color: var(--clr-amethyst);
+    padding: 14px 24px;
+}
+
+.btn--purple:hover {
+    background-color: var(--clr-purple-lavender);
+}
+
+.btn--green span {
+    color: var(--clr-blue-middle);
+}
+
+.dot {
+    width: var(--dot-size);
+    height: var(--dot-size);
+    border-radius: 50%;
+    background-color: var(--clr-slate-dark);
+    display: inline-block;
+}
+
+.dot--green {
+    background-color: var(--clr-cerulean-deep);
+}
+
+.dot--purple {
+    background-color: var(--clr-amethyst);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: var(--header-padding);
+}
+
+nav h3 {
+    font-size: var(--header-font-size);
+    font-weight: var(--header-font-weight);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+header img {
+    width: 90px;
+    height: 90px;
+}
+
+.header__left,
+.header__right {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.header__left img:nth-child(2),
+.header__left img:nth-child(5),
+.header__right img:nth-child(2),
+.header__right img:nth-child(5) {
+    transform: translateY(-50%);
+}
+
+.header__center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    width: 40%;
+}
+
+.header__center h1 {
+    color: var(--clr-slate-dark);
+    font-size: 3rem;
+    font-weight: var(--font-weight-bold);
+    line-height: 1;
+    width: 60%;
+}
+
+.header__center p {
+    color: var(--clr-gray-cool);
+    font-size: var(--font-size-base);
+    font-weight: 400;
+}
+
+.media {
+    margin: 2rem 0 8rem;
+}
+
+.media-images {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 30px;
+    overflow: hidden;
+    margin-bottom: 4rem;
+}
+
+.media-img {
+    width: 20%;
+    border-radius: 10px;
+}
+
+.media-content {
+    width: 40%;
+    margin: auto;
+}
+
+.media-content .media-lead {
+    text-transform: uppercase;
+    color: var(--clr-cerulean-deep);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.media-content h1 {
+    font-size: 32px;
+    font-weight: var(--font-weight-bold);
+    width: 75%;
+    margin: auto;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.media-description {
+    color: var(--clr-gray-cool);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.footer {
+    background-color: var(--clr-cerulean-deep);
+    background-image: url('./img/Bitmap_desktop.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: relative;
+}
+
+.footer__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: var(--footer-padding);
+    color: var(--clr-gray-very-light);
+    width: var(--footer-width);
+    margin: 0 auto;
+}
+
+.footer h1 {
+    font-size: 2em;
+    font-weight: var(--font-weight-bold);
+    text-align: start;
+    width: 30%;
+}
+
+.footer p {
+    font-size: var(--font-size-base);
+    width: 30%;
+    text-align: start;
+    letter-spacing: 1px;
+}
+
+.footer-buttons {
+    width: auto;
+}
+
+.footer-buttons .btn span {
+    color: var(--clr-purple-lavender);
+}
+
+.vertical-line {
+    height: var(--separator-height);
+    width: 0;
+    border: 1px solid var(--clr-gray-cool);
+}
+
+.circle-text {
+    padding: var(--circle-text-padding);
+    border-radius: 50%;
+    border: 1px solid var(--clr-gray-cool);
+    background-color: var(--clr-gray-very-light);
+}
+
+.seperator-1,
+.seperator-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seperator-2 {
+    position: absolute;
+    top: -6rem;
+    left: 50%;
+}
