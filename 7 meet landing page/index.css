@@ -286,6 +286,10 @@ header img {
     left: 50%;
 }
 
+.circle-text p {
+    line-height: 20px;
+}
+
 @media (max-width: 768px) {
     header {
         flex-direction: row;
